@@ -38,14 +38,15 @@ class LMV:public vehicle
             cin>>mileage;
             cout<<"Enter the RPM of the LMV: ";
             cin>>rpm;
+            cout<<"\n&&&&&&&&&&&&&&&&&&&&&&&&&&&\n"<<endl;
         }
         void display_stats()
         {
-            cout<<"\n\n------------------------------\n\n";
+            cout<<"\n------------------------------\n";
             cout<<"The speed of the LMV vehicle is "<<speed<<endl;
             cout<<"The mileage of the LMV vehicle is "<<mileage<<endl;
             cout<<"The RPM of the LMV vehicle is "<<rpm<<endl;
-            cout<<"\n\n*********************************\n\n";
+            cout<<"\n*********************************\n";
         }
 };
 class HMV:public vehicle
@@ -72,14 +73,14 @@ class HMV:public vehicle
             cin>>mileage;
             cout<<"Enter the RPM of the HMV: ";
             cin>>rpm;
+            cout<<"\n&&&&&&&&&&&&&&&&&&&&&&&&&&&\n"<<endl;
         }
         void display_stats()
         {
-            cout<<"\n\n------------------------------\n\n";
             cout<<"The speed of the HMV vehicle is "<<speed<<endl;
             cout<<"The mileage of the HMV vehicle is "<<mileage<<endl;
             cout<<"The RPM of the HMV vehicle is "<<rpm<<endl;
-            cout<<"\n\n*********************************\n\n";
+            cout<<"\n*********************************\n";
         }
 };
 class TMV:public vehicle
@@ -109,16 +110,15 @@ class TMV:public vehicle
         }
         void display_stats()
         {
-            cout<<"\n\n------------------------------\n\n";
             cout<<"The speed of the TmV vehicle is "<<speed<<endl;
             cout<<"The mileage of the TMV vehicle is "<<mileage<<endl;
             cout<<"The RPM of the TMV vehicle is "<<rpm<<endl;
-            cout<<"\n\n*********************************\n\n";
+            cout<<"\n*********************************\n";
         }
 };
 int main()
 {
-    vehicle *ptr[3];
+    vehicle *ptr[2];
     LMV l;
     ptr[0]=&l;
     HMV h;
@@ -126,15 +126,14 @@ int main()
     TMV t;
     ptr[2]=&t;
 
-    //LMV->Light Motor Vehicle
+    
     ptr[0]->spec();
-    ptr[0]->display_stats();
-
-    //HMV->Heavy Motor Vehicle
     ptr[1]->spec();
-    ptr[1]->display_stats();
-
-    //TMV->Two Motor Vehicle   
     ptr[2]->spec();
+
+
+    ptr[0]->display_stats();
+    ptr[1]->display_stats();
     ptr[2]->display_stats();
+    
 }
